@@ -4,12 +4,7 @@ const tourContoller = require('../controllers/tourController');
 
 const router = express.Router();
 
-router.param('id', tourContoller.checkID);
-
-router
-  .route('/')
-  .get(tourContoller.getTours)
-  .post(tourContoller.checkTour, tourContoller.createTour);
+router.route('/').get(tourContoller.getTours).post(tourContoller.createTour);
 
 router
   .route('/:id')
