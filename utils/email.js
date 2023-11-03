@@ -14,7 +14,7 @@ const sendEmail = async (options) => {
 
   //2) Define email options
   const mailOptions = {
-    from: 'Password reset <mailgun@sandbox-123.mailgun.org>',
+    from: `Password reset <${process.env.MAIL_GUN_SMTP}>`,
     to: ['mainahmwangi12@gmail.com', 'briankagwanja34@gmail.com'],
     subject: 'Password Reset Email (Valid for 10 Mins only)',
     text: options.message,
